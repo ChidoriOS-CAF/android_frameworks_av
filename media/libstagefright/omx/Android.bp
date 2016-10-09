@@ -86,6 +86,14 @@ cc_library_shared {
         "-Wno-documentation",
     ],
 
+    product_variables: {
+        chidori: {
+            uses_qcom_bsp_legacy: {
+                cppflags: ["-DQCOM_BSP_LEGACY"],
+            },
+        },
+    },
+
 }
 
 cc_library_shared {
